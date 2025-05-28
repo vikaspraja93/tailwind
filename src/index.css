@@ -138,3 +138,49 @@
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
 }
+
+
+
+/* for animation */
+
+.logo-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.logo-track {
+  display: flex;
+  animation: slide 30s linear infinite;
+  gap: 3rem;
+  width: fit-content;
+}
+
+.logo-track:hover {
+  animation-play-state: paused;
+}
+
+/* smooth animation  */
+.logo-track {
+  display: flex;
+  animation: slide 30s linear infinite;
+  gap: 3rem;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 3));
+  }
+}
+
+.logo-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+  min-width: 192px;
+}
